@@ -58,6 +58,11 @@ void NWindow::Clear(const glm::vec4 &col)
 void NWindow::Display()
 {
 	SDL_GL_SwapWindow((SDL_Window*)m_implWindow);
+
+	GLenum err = glGetError();
+	if (err != GL_NO_ERROR) {
+		printf("OpenGL error: %x\n", err);
+	}
 }
 
 void NWindow::Destroy()

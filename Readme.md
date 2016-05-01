@@ -27,3 +27,18 @@ int main()
 	return 0;
 }
 ```
+
+## What's fucked up right now
+
+Currently, running this program relies on having this directory layout:
+
+```
+./
+./build/
+./build/nimgl
+./nimgl/
+./nimgl/CMakeLists.txt
+./nimgl/...
+```
+
+As well as the current working directory always being in the `build` folder.

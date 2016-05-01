@@ -8,6 +8,7 @@ add_executable(${PROJECT_NAME}
   NimGL.cpp NimGL.h NimGL_internal.h
   NContext.cpp NContext.h
   NWindow.cpp NWindow.h
+  NTexture.cpp NTexture.h
 )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)

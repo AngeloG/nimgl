@@ -1,6 +1,7 @@
 #pragma once
 
 #include "NWindow.h"
+#include "NTexture.h"
 
 // Core functions
 void NInit();
