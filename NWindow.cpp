@@ -69,6 +69,7 @@ void NWindow::Destroy()
 {
 	if (m_context != nullptr) {
 		delete m_context;
+		m_context = nullptr;
 	}
 	if (m_implWindow != nullptr) {
 		SDL_DestroyWindow((SDL_Window*)m_implWindow);
