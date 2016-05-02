@@ -4,6 +4,11 @@
 
 int main()
 {
+	NFile f("../nimgl/Assets/Quad.vtx.sha");
+	NString shaderScript = f.ReadAll();
+
+	printf("'%s'\n", (const char*)shaderScript);
+
 	NInit();
 
 	NWindow window;

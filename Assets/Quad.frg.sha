@@ -1,0 +1,10 @@
+in vec2 coords;
+
+uniform sampler2D texQuad;
+
+out vec4 outColor;
+
+void main()
+{
+	outColor = texture(texQuad, coords);
+}

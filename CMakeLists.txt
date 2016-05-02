@@ -4,6 +4,11 @@ cmake_minimum_required(VERSION 2.8)
 add_executable(${PROJECT_NAME}
   main.cpp
 
+  NCore/StdH.h
+  NCore/NCore.h
+  NCore/NString.cpp NCore/NString.h
+  NCore/NFiles.cpp NCore/NFiles.h
+
   StdH.h StdHP.h
   NimGL.cpp NimGL.h NimGL_internal.h
   NContext.cpp NContext.h
@@ -12,6 +17,7 @@ add_executable(${PROJECT_NAME}
 
   NVertexBuffer.cpp NVertexBuffer.h
   NVertices.h
+  NShader.cpp NShader.h
 
   NTexture.cpp NTexture.h
   NSprite2D.cpp NSprite2D.h

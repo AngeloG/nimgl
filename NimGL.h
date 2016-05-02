@@ -1,5 +1,6 @@
 #pragma once
 
+#include "NCore/NCore.h"
 #include "NWindow.h"
 #include "NTexture.h"
 #include "NSprite2D.h"
