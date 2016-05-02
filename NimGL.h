@@ -2,6 +2,7 @@
 
 #include "NWindow.h"
 #include "NTexture.h"
+#include "NSprite2D.h"
 
 // Core functions
 void NInit();

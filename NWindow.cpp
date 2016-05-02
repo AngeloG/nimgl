@@ -14,7 +14,7 @@ NWindow::NWindow(const char* title)
 NWindow::NWindow(const char* title, int w, int h)
 {
 	m_implWindow = (void*)SDL_CreateWindow("NimGL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, SDL_WINDOW_OPENGL);
-	m_implContext = (void*)SDL_GL_CreateContext((SDL_Window*)m_implWindow);
+	m_context = new NWindowContext(m_implWindow);
 
 	m_bEscapeCloses = false;
 }
@@ -67,9 +67,8 @@ void NWindow::Display()
 
 void NWindow::Destroy()
 {
-	if (m_implContext != nullptr) {
-		SDL_GL_DeleteContext((SDL_GLContext)m_implContext);
-		m_implContext = nullptr;
+	if (m_context != nullptr) {
+		delete m_context;
 	}
 	if (m_implWindow != nullptr) {
 		SDL_DestroyWindow((SDL_Window*)m_implWindow);

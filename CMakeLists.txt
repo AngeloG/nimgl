@@ -8,7 +8,13 @@ add_executable(${PROJECT_NAME}
   NimGL.cpp NimGL.h NimGL_internal.h
   NContext.cpp NContext.h
   NWindow.cpp NWindow.h
+  NWindowContext.cpp NWindowContext.h
+
+  NVertexBuffer.cpp NVertexBuffer.h
+  NVertices.h
+
   NTexture.cpp NTexture.h
+  NSprite2D.cpp NSprite2D.h
 )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)

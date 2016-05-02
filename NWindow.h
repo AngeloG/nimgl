@@ -2,11 +2,13 @@
 
 #include "StdHP.h"
 
+#include "NWindowContext.h"
+
 class NWindow
 {
 private:
 	void* m_implWindow;
-	void* m_implContext;
+	NWindowContext* m_context;
 
 public:
 	bool m_bEscapeCloses;
