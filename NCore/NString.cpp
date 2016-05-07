@@ -28,15 +28,8 @@ NString::~NString()
 	}
 }
 
-NString::operator const char*()
-{
-	return m_buffer;
-}
-
-NString::operator const char*() const
-{
-	return m_buffer;
-}
+NString::operator const char*() { return m_buffer; }
+NString::operator const char*() const { return m_buffer; }
 
 NString &NString::operator +=(const char* str)
 {
@@ -72,4 +65,9 @@ void NString::CopyString(const char* str)
 
 	memcpy(m_buffer, str, m_bufferLength);
 	m_buffer[m_bufferLength] = '\0';
+}
+
+NString operator+(const NString &a, const char* b)
+{
+	return NString(a) += b;
 }

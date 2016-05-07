@@ -6,3 +6,5 @@
 #include <GL/glew.h>
 
 #include "StdHP.h"
+
+#include "NCore/NCore.h"

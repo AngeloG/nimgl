@@ -26,3 +26,5 @@ private:
 	void EnsureBuffer(int length);
 	void CopyString(const char* str);
 };
+
+NString operator+(const NString &a, const char* b);

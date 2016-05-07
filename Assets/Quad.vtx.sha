@@ -1,3 +1,5 @@
+#version 130
+
 in ivec2 position;
 
 out vec2 coords;
@@ -6,8 +8,8 @@ uniform ivec2 resolution;
 
 void main()
 {
-	float dev_x = position.x / (float)resolution.x;
-	float dev_y = position.y / (float)resolution.y;
+	float dev_x = position.x / float(resolution.x);
+	float dev_y = position.y / float(resolution.y);
 	gl_Position = vec4(-1 + dev_x * 2, 1 - dev_y * 2, 0, 1);
 	coords = vec2(dev_x, dev_y);
 }

@@ -3,6 +3,7 @@
 #include "StdHP.h"
 
 #include "NWindowContext.h"
+#include "NSprite2D.h"
 
 class NWindow
 {
@@ -23,6 +24,7 @@ public:
 
 	virtual void Clear();
 	virtual void Clear(const glm::vec4 &col);
+	virtual void Render(NSprite2D &sprite);
 	virtual void Display();
 
 	virtual void Destroy();

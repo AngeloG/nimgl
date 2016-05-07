@@ -55,6 +55,12 @@ void NWindow::Clear(const glm::vec4 &col)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
+void NWindow::Render(NSprite2D &sprite)
+{
+	m_context->m_shaQuad.Use();
+	m_context->m_vboQuad.DrawArrays();
+}
+
 void NWindow::Display()
 {
 	SDL_GL_SwapWindow((SDL_Window*)m_implWindow);

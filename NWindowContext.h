@@ -1,6 +1,7 @@
 #pragma once
 
 #include "NVertexBuffer.h"
+#include "NShader.h"
 
 class NWindowContext
 {
@@ -9,6 +10,7 @@ private:
 
 public:
 	NVertexBuffer m_vboQuad;
+	NShader m_shaQuad;
 
 public:
 	NWindowContext(void* pWindow);

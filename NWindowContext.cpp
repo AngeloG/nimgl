@@ -21,7 +21,7 @@ NWindowContext::NWindowContext(void* pWindow)
 	if (!g_pContext->m_bGlewInitialized) {
 		glewExperimental = true;
 		glewInit();
-		glGetError(); // first error might not be GL_NO_ERROR on some machines, so ignore thi
+		glGetError(); // first error might not be GL_NO_ERROR on some machines, so ignore this
 	}
 
 	const NVertex2D arrQuad[] = {
@@ -29,6 +29,8 @@ NWindowContext::NWindowContext(void* pWindow)
 		{{ 1, 1 }}, {{ 0, 1 }}, {{ 0, 0 }},
 	};
 	m_vboQuad.LoadBuffer(arrQuad, 6);
+
+	m_shaQuad.Load("../nimgl/Assets/Quad");
 }
 
 NWindowContext::~NWindowContext()
