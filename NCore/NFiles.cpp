@@ -33,10 +33,11 @@ NString NFile::ReadAll()
 	NString ret;
 	char buffer[512];
 	while (!m_atEOF) {
-		if (fread(buffer, 1, 511, (FILE*)m_implHandle) < 511) {
+		int ctRead = fread(buffer, 1, 511, (FILE*)m_implHandle);
+		if (ctRead < 511) {
 			m_atEOF = true;
 		}
-		buffer[511] = '\0';
+		buffer[ctRead] = '\0';
 		ret += buffer;
 	}
 	return ret;
